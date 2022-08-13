@@ -1,0 +1,258 @@
+/* colors */ 
+/* greeen : #64b037
+   blue : #028acf
+   yellow : #ffca2c
+   lightblue :#d0ebff
+*/
+
+/* navbar style */
+nav .container ul li a{
+    color: #000;
+}
+
+/* header */
+header{
+    background-image: url('/assets/background.jpg');
+    padding: 3rem 0;
+    background-position: 50%;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+header #title{
+    font-weight: 700;
+    font-size: 2rem;
+}
+header ol{
+    list-style: none;
+    display: flex;
+}
+header ol li:last-child::before{
+content:" // ";
+color: #fff;
+padding: 0 0.5rem;
+}
+/* steps style */
+.steps{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.steps img{
+  width: 40%;
+  height: 4rem;
+}
+.steps .content{
+  display:flex;
+  max-width: 50%;
+  height: auto;
+  font-size: 1vw;
+}
+.steps .step1,.step2{
+background-color: #64b037;
+color: #fff;
+border-radius: 1rem;
+padding:0.5rem 0.5rem ;
+margin: 2rem 0.5rem;
+}
+.steps .step3{
+background-color: #028acf;
+color: #fff;
+border-radius: 1rem;
+padding:0.5rem 0.5rem ;
+margin: 2rem 0.5rem;
+}
+.steps .step4 ,.step5,.step6,.step7{
+background-color: #d0ebff;
+border-radius: 1rem;
+padding:0.5rem 0.5rem ;
+margin: 2rem 0.5rem;
+}
+@media (min-width: 576px) and (max-width: 768px) { 
+  .steps img{
+   display: none;
+  }
+}
+/* paragraph style */
+#selectemp{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+/* employees style */
+.employees{
+    display: flex;
+    justify-content: center;
+}
+.employees .searchresult{
+    background-color: lightgray;
+    border-radius: 0.6rem;
+    width: 45rem;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem;
+}
+.employees .searchresult span{
+    color: #ffca2c ;
+}
+.employees .filters{
+    background-color: lightgray;
+    border-radius: 0.6rem;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem;
+}
+/* filter style */
+.employees .filters{
+    width: 12rem;
+    height: 18rem;
+}
+.employees .filters .age{
+    background-color: gray;
+    font-weight: 600;
+    width: 2rem;
+    text-align: center;
+    border-radius: 0.4rem;
+}
+/* tooltip style */
+.employees .filters .toolTip{
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.employees .filters .toolTip .tool{
+ background-color: #fff;
+ border: 0.2rem solid #028acf;
+ border-radius: 50%;
+ margin: 0.4rem 0 0.4rem 0.8rem;
+ width: 1.6rem;
+ height: 1.6rem;
+ position: relative;
+}
+.employees .filters .toolTip .tool .tooltipText {
+  background-color: #028acf;
+  color: #fff;
+  visibility: hidden;
+  width: 2rem;
+  border-radius: 0.4rem;
+  text-align: center;
+  padding: 0.4rem;
+  position: absolute;
+  bottom: 1.6rem;
+  z-index: 1;
+  }
+  .employees .filters .toolTip .tool:hover .tooltipText{
+    visibility: visible;
+  }   
+  .employees .filters .toolTip .progress{
+    background: var(--line-border-fill);
+    background-color: #028acf;
+    position: absolute;
+    top: 48%;
+    left:22%;
+    height: 0.2rem;
+    width: 1.2rem;
+    z-index: 1;
+    transition: 0.4s ease;
+  }
+  .employees .filters .toolTip::after{
+    content: "";
+    background: var(--line-border-empty);
+    background-color: #fff;
+    height: 0.2rem;
+    width: 4.5rem;
+    z-index: 1;
+    margin-top: 1rem;
+  }
+  /* dropdown style */
+  .employees .filters select{
+    width: 10rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.6rem;
+  }
+  /* buttons style */
+  .employees .filters .showDel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .employees .filters .showDel .show button{
+   margin: 0.8rem 0.3rem;
+   border-radius: 0.6rem;
+  }
+  .employees .filters .showDel .delete{
+    background-color: #ffca2c;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+  }  
+  /* delete tool tip style */
+  .employees .filters .showDel .delete .delTooltip{
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    position: absolute;
+    top: 2.3rem;
+  } 
+  .employees .filters .showDel .delete:hover .delTooltip{
+    visibility: visible;
+  }
+  /* employees details style  */
+  .employees .empdetails{
+    margin: 0.5rem;
+}
+.employees .empdetails .emp{
+    border: 0.1rem solid lightgray;
+    border-radius: 0.6rem;
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    text-transform:uppercase;
+    color: #028acf;
+    font-weight: 700;
+}
+.employees .empdetails .emp:active{
+    background-color: #028acf;
+    color: #ffca2c;
+}
+.employees .empdetails .emp img{
+  float: right;
+}
+.employees .empdetails .emp .paragraphs p{
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    color: #000;
+    font-weight:normal;
+}
+.employees .empdetails .emp:active .paragraphs p{
+ color: #fff;
+}
+/* paginate buttons style */
+.paginate{
+    display: flex;
+    flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+}
+.paginate button{
+    border-radius: 1.5rem;
+    margin: 0.8rem 0;
+    width: 8rem;
+}
+/* footer style */
+footer{
+    background-image: -webkit-linear-gradient(
+        0deg,
+        rgb(27, 55, 149) 0%,
+        rgb(0, 145, 215) 100% 
+    );
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
